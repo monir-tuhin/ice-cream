@@ -23,7 +23,7 @@ export default class IceCreamBuilder extends Component {
   getIceCreamItems() {
     fetch('https://react-ice-cream-9c598-default-rtdb.asia-southeast1.firebasedatabase.app/items.json')
       .then(data => data.json())
-      .then(res => {
+      .then((res) => {
         this.setState({
           items: res,
         })
@@ -62,7 +62,7 @@ export default class IceCreamBuilder extends Component {
     return(
       <div className={["container", classes.container].join(" ")}>
         <IceCream scoops={scoops}/>
-        <Builder items={items} price={totalPrice} add={this.addScoop} remove={this.removeScoop} scoops={scoops}/>
+        <Builder add={this.addScoop} items={items} price={totalPrice} remove={this.removeScoop} scoops={scoops}/>
       </div>
     )
   }

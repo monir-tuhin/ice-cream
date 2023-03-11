@@ -6,7 +6,7 @@ const Items = ({items, add, remove, scoops}) => {
   return(
     <div>
       <ul>
-        {flavours.map(flavour => <Item key={flavour} name={flavour} add={add} remove={remove} scoops={scoops}/>)}
+        {flavours.map(flavour => <Item key={flavour} add={add} name={flavour} remove={remove} scoops={scoops}/>)}
       </ul>
     </div>
   )

@@ -9,9 +9,9 @@ const Builder = ({items, price, add, remove, scoops}) => {
     <div>
       <div className={classes.builder}>
         <h3>Build your own Ice Cream Sundae</h3>
-        <Items items={items} add={add} remove={remove} scoops={scoops}/>
+        <Items add={add} items={items} remove={remove} scoops={scoops}/>
         <TotalPrice price={price}/>
-        <button type="button" className={[classes.order, "rounded"].join(" ")}>
+        <button className={[classes.order, "rounded"].join(" ")} type="button">
           Add to Cart
         </button>
       </div>
